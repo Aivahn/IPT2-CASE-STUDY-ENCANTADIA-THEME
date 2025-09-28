@@ -65,6 +65,71 @@ body::before {
   filter: drop-shadow(0 0 25px var(--soul-glow)) drop-shadow(0 0 40px rgba(168, 208, 230, 0.6));
 }
 
+/* Hero gem scaling */
+.hero-gem-large {
+  transform: scale(2);
+}
+
+/* Card gem scaling */
+.card-gem-size {
+  transform: scale(0.8);
+  margin-bottom: 1rem;
+}
+
+/* Service gem scaling */
+.service-gem {
+  transform: scale(0.7);
+  margin-bottom: 1rem;
+}
+
+/* Skill gem scaling */
+.skill-gem {
+  transform: scale(0.6);
+}
+
+/* Resume gem scaling */
+.resume-gem-size {
+  transform: scale(1);
+  margin-bottom: 1.5rem;
+}
+
+/* Separator gem styling */
+.separator-gem {
+  opacity: 0.6;
+}
+
+/* Email link styling */
+.email-link {
+  color: var(--mystical-blue);
+}
+
+/* Resume card styling */
+.resume-card {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.resume-gem {
+  text-align: center;
+}
+
+.resume-note {
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--mystical-blue);
+}
+
+/* Contact quote styling */
+.contact-quote {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.quote-text {
+  color: var(--silver-mist);
+  font-style: italic;
+}
+
 @keyframes gentle-pulse {
   0%, 100% { transform: scale(1); filter: drop-shadow(0 0 15px var(--soul-glow)) drop-shadow(0 0 30px rgba(168, 208, 230, 0.4)); }
   50% { transform: scale(1.02); filter: drop-shadow(0 0 20px var(--soul-glow)) drop-shadow(0 0 35px rgba(168, 208, 230, 0.5)); }
@@ -179,7 +244,6 @@ body::before {
 
 .hero-gem {
   margin-bottom: 3rem;
-  transform: scale(2);
   z-index: 1;
   position: relative;
 }
@@ -360,7 +424,6 @@ body::before {
   color: var(--deep-soul);
 }
 
-
 .skill-orb h4 {
   color: var(--soul-white);
   margin: 0 0 0.5rem;
@@ -408,7 +471,6 @@ body::before {
   border-radius: 50%;  
   border: 3px solid var(--ethereal-purple); 
 }
-
 
 .contact-grid {
   display: grid;
@@ -464,9 +526,4 @@ a:focus, button:focus {
 
 .section-separator {
   text-align: center;
-}
-
-.separator-gem {
-  transform: scale(0.8);
-  opacity: 0.6;
 }

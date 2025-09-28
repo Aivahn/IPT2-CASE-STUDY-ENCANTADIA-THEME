@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Encantadia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .landing {
+      position: relative;
+      height: 100vh;
+      background: url('images-videos/encantadia.jpg') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: rgb(147, 125, 0);
+    }
+
+    .landing::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+
+    .landing h1,
+    .brilyantes {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brilyantes {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .brilyantes img {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      animation: float 3s ease-in-out infinite;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      cursor: pointer;
+    }
+
+    .brilyantes img.green:hover  { transform: scale(1.2); filter: drop-shadow(0 0 25px green); }
+    .brilyantes img.yellow:hover { transform: scale(1.2); filter: drop-shadow(0 0 25px gold); }
+    .brilyantes img.white:hover  { transform: scale(1.2); filter: drop-shadow(0 0 25px white); }
+    .brilyantes img.red:hover    { transform: scale(1.2); filter: drop-shadow(0 0 25px red); }
+    .brilyantes img.blue:hover   { transform: scale(1.2); filter: drop-shadow(0 0 25px blue); }
+
+    @keyframes float {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .landing h1,
+    .services h2 {
+      font-family: 'Cinzel Decorative', serif;
+      text-shadow: 1px 1px 4px black;
+      letter-spacing: 2px;
+    }
+
+    .landing h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: rgb(180, 153, 3);
+    }
+
+    .encantadia-title {
+      font-size: 7em !important;
+      font-family: 'Cinzel Decorative', serif;
+      background: linear-gradient(90deg, #FFD700, #FFB700, #FFD700, #fff, #FFD700);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 6px black;
+      margin-top: 10px;
+      margin-bottom: 75px !important;
+      animation: shine 5s linear infinite;
+    }
+
+    @keyframes shine {
+      0% { background-position: 0% center; }
+      100% { background-position: 300% center; }
+    }
+
+    .services {
+      background: black;
+      text-align: center;
+      padding: 80px 10% 20px;
+      color: white;
+      position: relative;
+    } 
+
+    .banner-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 60px;
+    }
+
+    .sanggre-banner {
+      display: block;
+      margin: 0 auto;
+      width: 900px; 
+      max-width: 95%;
+      height: auto;
+    }
+
+    .banner-title h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    font-family: 'Cinzel Decorative', serif;
+    color: #c6ac1a;
+    font-weight: 700;
+    margin: 0;
+    white-space: nowrap;
+
+    text-shadow: 
+        0 0 2px #000,       
+        0 2px 2px #B8860B, 
+        0 -1px 1px #FFF8DC,  
+        1px 1px 2px #FFB700; 
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 50px;
+      margin-top: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .card {
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .carl   { box-shadow: 0 0 30px rgba(0, 120, 255, 0.8); }
+    .kenzo  { box-shadow: 0 0 30px rgba(0, 255, 100, 0.8); }
+    .alysa  { box-shadow: 0 0 30px rgba(255, 50, 50, 0.8); }
+    .razzmin{ box-shadow: 0 0 30px rgba(139, 69, 19, 0.8); }
+    .aivahn { box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); }
+
+    .carl:hover   { transform: scale(1.1); box-shadow: 0 0 50px rgba(0, 120, 255, 1); }
+    .kenzo:hover  { transform: scale(1.1); box-shadow: 0 0 50px rgba(0, 255, 100, 1); }
+    .alysa:hover  { transform: scale(1.1); box-shadow: 0 0 50px rgba(255, 50, 50, 1); }
+    .razzmin:hover{ transform: scale(1.1); box-shadow: 0 0 50px rgba(139, 69, 19, 1); }
+    .aivahn:hover { transform: scale(1.1); box-shadow: 0 0 50px rgba(255, 255, 255, 1); }
+
+    .card h3 {
+      margin-top: 25px;
+      font-size: 1rem;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      color: #9f8700;
+      text-shadow: 1px 1px 6px black;
+    }
+
+    .sanggre-role {
+      margin-top: 5px;
+      font-size: 1.1rem;
+      font-family: 'Cinzel', serif;
+      font-weight: 500;
+      color: #fff;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .magic-circle {
+      margin-top: -350px;
+      display: flex;
+      justify-content: center;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .magic-circle video {
+      width: 2000px;
+      max-width: 95vw;
+      height: auto;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="landing">
+    <div class="brilyantes">
+      <img src="images-videos/brilyante-ng-tubig.png"  alt="Tubig"  class="green">
+      <img src="images-videos/brilyante-ng-lupa.png"   alt="Lupa"   class="yellow">
+      <img src="images-videos/brilyante-ng-diwa.png"   alt="Diwa"   class="white">
+      <img src="images-videos/brilyante-ng-apoy.png"   alt="Apoy"   class="red">
+      <img src="images-videos/brilyante-ng-hangin.png" alt="Hangin" class="blue">
+    </div>
+    <h1>Maligayang Pagdating sa</h1>
+    <h1 class="encantadia-title">ENCANTADIA</h1>
+  </section>
+
+  <section class="services" data-aos="fade-up">
+    <div class="banner-title">
+      <img src="images-videos/banner.png" alt="Banner" class="sanggre-banner">
+      <h2>Ang mga Sanggre</h2>
+    </div>
+
+    <div class="team">
+      <div class="card">
+        <a href="dayao.html" target="_blank">
+          <img src="images-videos/carl-d.jpg" alt="Carl Dayao" class="profile-img carl">
+        </a>
+        <h3>Carl Rham Jhay Dayao</h3>
+        <div class="sanggre-role">(Sanggre Amihan)</div>
+      </div>
+      <div class="card">
+        <a href="ocampo.html" target="_blank">
+          <img src="images-videos/kenzo-o.jpg" alt="Kenzo Ocampo" class="profile-img kenzo">
+        </a>
+        <h3>Kenzo Lian Ocampo</h3>
+        <div class="sanggre-role">(Sanggre Adamus)</div>
+      </div>
+      <div class="card">
+        <a href="palma.html" target="_blank">
+          <img src="images-videos/alysa-p.jpg" alt="Alysa Palma" class="profile-img alysa">
+        </a>
+        <h3>Alysa Palma</h3>
+        <div class="sanggre-role">(Sanggre Pirena)</div>
+      </div>
+      <div class="card">
+        <a href="villegas.html" target="_blank">
+          <img src="images-videos/razzmin-v.jpg" alt="Razzmin Villegas" class="profile-img razzmin">
+        </a>
+        <h3>Razzmin Dawn Villegas</h3>
+        <div class="sanggre-role">(Sanggre Danaya)</div>
+      </div>
+      <div class="card">
+        <a href="torres.html" target="_blank">
+          <img src="images-videos/aivahn-t.jpg" alt="Aivahn Torres" class="profile-img aivahn">
+        </a>
+        <h3>Aivahn Torres</h3>
+        <div class="sanggre-role">(Sanggre Pao Pao)</div>
+      </div>
+    </div>
+
+    <div class="magic-circle">
+      <video autoplay muted loop>
+        <source src="images-videos/magic-circle.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+</body>
+</html>

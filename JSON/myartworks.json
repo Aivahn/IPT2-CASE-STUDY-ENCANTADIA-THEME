@@ -1,0 +1,76 @@
+{
+  "artworks": [
+    {
+      "title": "H.",
+      "year": 2023,
+      "image": "../images/art1.jpg",
+      "description": "just a fun project i made for my bias (haechan) haha"
+    },
+    {
+      "title": "TSB",
+      "year": 2023,
+      "image": "../images/art2.jpg",
+      "description": "These three has the best chemistry ever! Axel, Altare and Selen from Holostars and Nijisanji En."
+    },
+    {
+      "title": "K. Momobami",
+      "year": 2024,
+      "image": "../images/art3.png",
+      "description": "From the anime Kakegurui."
+    },
+    {
+      "title": "College Sketches",
+      "year": 2023, 
+      "image": "../images/art4.jpeg",
+      "description": "My college friends."
+    },
+    {
+      "title": "Model of a friend, drawn by meee",
+      "year": 2025,
+      "image": "../images/art5.png",
+      "description": "A vtuber model of a friend that I drew."
+    },
+    {
+      "title": "Sohee from riize",
+      "year": 2024,
+      "image": "../images/art6.png",
+      "description": "Found this cute picture of Sohee and decided to draw it"
+    },
+     {
+      "title": "Clorinde Selen",
+      "year": 2024,
+      "image": "../images/art7.jpg",
+      "description": "I'm a big fan of this character, and I draw her as clorinde from genshin impact."
+    },
+    {
+      "title": "Doki",
+      "year": 2024,
+      "image": "../images/art8.jpg",
+      "description": "I'm a big fan of her."
+    },
+    {
+      "title": "Tyler and Kael",
+      "year": 2023,
+      "image": "../images/art9.jpg",
+      "description": "from Under the Roaring Thunders by ineryss"
+    },
+    {
+      "title": "Doki sketch",
+      "year": 2023,
+      "image": "../images/art10.jpg",
+      "description": "this is a rgrk i made that i haven't finished until now."
+    },
+    {
+      "title": "Eyes on you",
+      "year": 2022,
+      "image": "../images/art11.jpg",
+      "description": "This is from when i first used pastel colors, it turned out great."
+    },
+    {
+      "title": "House of Cards",
+      "year": 2021,
+      "image": "../images/art13.jpg",
+      "description": "This is an artwork that i drew a long time ago. It's the hermit and the king from Tarot Cards"
+    }
+  ]
+}

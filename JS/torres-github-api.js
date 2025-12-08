@@ -1,60 +1,23 @@
 /**
  * GitHub API Integration
  * Fetches repositories from a GitHub user and displays them dynamically
- * 
- * Configuration: Uses environment variables from .env file
- * Do NOT commit .env to GitHub - keep it in .gitignore
  */
 
-// These will be populated from .env file via loadEnvironment()
-let GITHUB_USER = 'Aivahn'; // Default fallback
-let GITHUB_TOKEN = ''; // Will be loaded from .env
-let GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USER}/repos`;
+const GITHUB_USER = 'Aivahn'; // Replace with your actual GitHub username
+const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USER}/repos`;
 
-/**
- * Load environment variables from .env file
- * For development environment variable loading
- */
-async function loadEnvironment() {
-  try {
-    const response = await fetch('.env');
-    if (response.ok) {
-      const envContent = await response.text();
-      
-      // Parse .env file
-      const lines = envContent.split('\n');
-      lines.forEach(line => {
-        line = line.trim();
-        // Skip comments and empty lines
-        if (!line || line.startsWith('#')) return;
-        
-        const [key, value] = line.split('=').map(s => s.trim());
-        if (key === 'GITHUB_TOKEN') {
-          GITHUB_TOKEN = value;
-          console.log('✓ GitHub token loaded from .env');
-        } else if (key === 'GITHUB_USER') {
-          GITHUB_USER = value;
-          GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USER}/repos`;
-          console.log(`✓ GitHub user loaded: ${GITHUB_USER}`);
-        }
-      });
-    }
-  } catch (error) {
-    console.warn('Could not load .env file. Using fallback values.', error);
-  }
-}
+// GitHub Personal Access Token - Set this in your environment or leave blank for public access
+// Generate one at: https://github.com/settings/tokens
+// Scopes needed: public_repo (read-only access to public repos)
+// NOTE: Don't commit tokens to GitHub! Use environment variables instead
+const GITHUB_TOKEN = ''; // Leave empty for public API access (lower rate limits)
 
-// Helper function to get fetch headers with auth
+// Get fetch headers with optional authentication
 function getAuthHeaders() {
-  const headers = {
-    'Accept': 'application/vnd.github.v3+json'
-  };
-  
-  // Only add auth header if token is properly set
-  if (GITHUB_TOKEN && GITHUB_TOKEN.trim() && GITHUB_TOKEN !== 'YOUR_TOKEN_HERE') {
+  const headers = { 'Accept': 'application/vnd.github.v3+json' };
+  if (GITHUB_TOKEN && GITHUB_TOKEN.trim()) {
     headers['Authorization'] = `token ${GITHUB_TOKEN}`;
   }
-  
   return headers;
 }
 
@@ -63,26 +26,17 @@ function getAuthHeaders() {
  */
 async function fetchGitHubRepos() {
   try {
-    console.log(`Fetching repositories for user: ${GITHUB_USER}`);
-    console.log(`API URL: ${GITHUB_API_URL}`);
-    
     const response = await fetch(GITHUB_API_URL, {
       headers: getAuthHeaders()
     });
     
-    console.log(`Response status: ${response.status}`);
-    
     if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      console.error('GitHub API error response:', errorData);
-      throw new Error(`GitHub API error: ${response.status} - ${errorData.message || 'Unknown error'}`);
+      throw new Error(`GitHub API error: ${response.status}`);
     }
     
     const repos = await response.json();
-    console.log(`Successfully fetched ${repos.length} repositories`);
     displayRepositories(repos);
   } catch (error) {
-    console.error('Error fetching GitHub repositories:', error);
     displayError(`Unable to fetch repositories: ${error.message}`);
   }
 }
@@ -390,21 +344,13 @@ function displayError(message) {
  */
 async function fetchGitHubStats() {
   try {
-    const userApiUrl = `https://api.github.com/users/${GITHUB_USER}`;
-    console.log(`Fetching GitHub stats from: ${userApiUrl}`);
-    
-    const response = await fetch(userApiUrl, {
+    const response = await fetch(`https://api.github.com/users/${GITHUB_USER}`, {
       headers: getAuthHeaders()
     });
     
-    if (!response.ok) {
-      const errorData = await response.json().catch(() => ({}));
-      console.error('GitHub user API error:', errorData);
-      throw new Error(`GitHub API error: ${response.status}`);
-    }
+    if (!response.ok) throw new Error(`API error: ${response.status}`);
     
     const userData = await response.json();
-    console.log('Successfully fetched GitHub stats:', userData);
     displayGitHubStats(userData);
   } catch (error) {
     console.error('Error fetching GitHub stats:', error);
@@ -440,8 +386,7 @@ function displayGitHubStats(userData) {
 /**
  * Initialize GitHub API integration
  */
-async function initGitHubIntegration() {
-  await loadEnvironment();
+function initGitHubIntegration() {
   fetchGitHubRepos();
   fetchGitHubStats();
   initializeFileBrowser();

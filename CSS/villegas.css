@@ -1,0 +1,420 @@
+@font-face {
+    font-family: 'fantasy';
+    src: url(../CSS/EnchantedTales-FreeDemo.otf);
+}
+body {
+    margin:0;
+    padding:0;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7B4B2A;
+    padding: 15px 40px;
+    flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 30px;
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    align-self: left;
+}
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'fantasy';
+    color: #C19A6B;
+}
+.header-right {
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'fantasy';
+    letter-spacing: 2px;
+    color: #C19A6B;
+}
+section {
+    display:flex;
+   justify-content: flex-start;
+    gap: 30px;
+    padding:30px;
+    background-color: #E4E0E1;
+    flex-wrap: wrap;
+}
+.section-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    width: 65%;
+}
+@media (max-width: 1024px) {
+    .section-left {
+        width: 100%;
+    }
+}
+.pic {
+    width: 270px;
+    height: auto;
+    gap: 40px;
+    margin-left: 40px;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+    .pic {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.about-container {
+    display: flex;
+    flex-direction: column;
+}
+.about-title {
+    display: flex;
+    font-size: 20px;
+    line-height: 1;
+    font-family: 'fantasy';
+    color: #1b422c;
+    margin-left: 50px;
+}
+.about-wrapper {
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    margin-left: 30px;
+}
+.about-contents {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.7;
+    font-family: 'Garamond';
+}
+.about-decor {
+    width: 30px;
+    height:30px;
+    margin-top: 15px;
+}
+.section-right {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 10px;
+    padding-right: 40px;
+}
+@media (max-width: 1024px) {
+    .section-right {
+        width: 100%;
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+.skills-table {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+}
+.skills-card {
+    background-color:#E4E0E1;
+    border: 3px solid #7B4B2A;
+    border-radius: 10px;
+    padding: 10px 30px;
+    width: 85%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.skills-card h2 {
+    font-family: 'fantasy';
+    color:#1b422c;
+    font-size: 23px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+.skills-category {
+   display: flex;
+   flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.skills-category h3 {
+    font-family: 'fantasy';
+    color:#1b422c;
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.skills-logos {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    margin-top: 10px;
+    gap: 50px;
+}
+.skills-logos img {
+    width: 30px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+.skills-logos img.hover {
+    transform: scale(1.2)
+}
+.line {
+  text-align: center;
+  font-size: 30px;
+  color:#7B4B2A;
+  margin: 0px;
+  background-color: #E4E0E1;
+}
+.section-two {
+    background-color: #E4E0E1;
+    padding: 40px 20px;
+}
+.section-two-cards {
+    display:flex;
+    justify-content:space-between;
+    align-items: stretch;
+    gap: 32px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card h2 {
+    margin:8px 0 18px;
+    font-family: 'fantasy';
+    color: #E4E0E1;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.card {
+    position: relative;
+    background-color: #AB886D;
+    border: 3px solid #D6C0B3;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 0 1 60%;
+    min-width: 260px;
+    max-width: 600px;
+    padding: 55px 25px 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.card.techskills {
+    flex: 0 1 95%;
+    max-width: 500px;
+}
+.card.education, .card.hobbies {
+    flex: 0 1 75%;
+}
+.card-header {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card-emblem {
+    width: 70px;
+    height: auto;
+    display:block;
+}
+.card ul {
+    list-style: disc;
+    text-align: left;
+    padding-left: 1.1rem;
+    max-width: 90%;
+    line-height: 2.0;
+    font-family: 'Garamond';
+    letter-spacing: 2px;
+}
+.contact-card {
+    background-color: #E4E0E1;
+    border: 3px solid #7B4B2A;
+    border-radius: 10px;
+    padding: 30px 40px;
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.contact-card:hover {
+    background-color: #D6C0B3;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.contact-card h2 {
+    font-family: 'fantasy';
+    font-size: 24px;
+    color:#1b422c;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.contact-card p {
+    font-family: 'Garamond';
+    font-size: 18px;
+    margin: 10px 0;
+    color:#1b422c;
+}
+.section-three {
+    background-color: #E4E0E1;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.art-link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.art-link {
+    font-family: 'fantasy';
+    font-size: 22px;
+    color: #7B4B2A;
+    text-decoration: none;
+    padding: 15px 40px;
+    border: 3px solid #7B4B2A;
+    border-radius: 10px;
+    background-color: #D6C0B3;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    display: inline-block;
+    justify-content: center;
+    align-self: center;
+}
+.art-link:hover {
+    background-color: #7B4B2A;
+    color: #E4E0E1;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(123, 75, 42, 0.3);
+}
+.artwork-heading {
+    font-family: 'fantasy';
+    font-size: 36px;
+    color: #1b422c;
+    text-align: center;
+    margin: 30px 0;
+    letter-spacing: 3px;
+}
+.artwork-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+    background-color: #E4E0E1;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-items: center;
+}
+.artwork-card {
+    background-color: #AB886D;
+    border: 3px solid #D6C0B3;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.artwork-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.artwork-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.artwork-title {
+    font-family: 'fantasy';
+    font-size: 20px;
+    color: #E4E0E1;
+    padding: 15px 15px 5px;
+    margin: 0;
+    letter-spacing: 2px;
+}
+.artwork-desc {
+    font-family: 'Garamond';
+    font-size: 16px;
+    color: #E4E0E1;
+    padding: 0 15px 15px;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+.artwork-msg {
+    text-align: center;
+    font-family: 'Garamond';
+    font-size: 18px;
+    color: #7B4B2A;
+    padding: 20px;
+    margin: 20px 0;
+}
+.btn-random {
+    font-family: 'fantasy';
+    font-size: 18px;
+    color: #E4E0E1;
+    background-color: #7B4B2A;
+    border: 2px solid #D6C0B3;
+    padding: 12px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    display: block;
+}
+.btn-random:hover {
+    background-color: #AB886D;
+    color: #E4E0E1;
+    transform: scale(1.05);
+}
+.btn-random:active {
+    transform: scale(0.98);
+}
+.back-link {
+    font-family: 'fantasy';
+    font-size: 16px;
+    color: #7B4B2A;
+    text-decoration: none;
+    margin: 20px 80px;
+    display: inline-block;
+    transition: color 0.3s ease;
+    letter-spacing: 1px;
+}
+.back-link:hover {
+    color: #AB886D;
+}
+.artwork-gallery .artwork-card:only-child {
+    width: 350px;
+    margin: 0 auto;
+}
+.artwork-gallery .artwork-card:only-child .artwork-img {
+    height: 220px;
+    object-fit: cover;
+}

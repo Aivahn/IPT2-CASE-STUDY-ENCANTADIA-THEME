@@ -9,7 +9,7 @@ const GITHUB_API_URL = `https://api.github.com/users/${GITHUB_USER}/repos`;
 // GitHub Personal Access Token for higher rate limits
 // Generate one at: https://github.com/settings/tokens
 // Scopes needed: public_repo (read-only access to public repos)
-const GITHUB_TOKEN = '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';
+const GITHUB_TOKEN = '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';
 
 // Helper function to get fetch headers with auth
 function getAuthHeaders() {

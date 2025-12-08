@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kenzo's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../CSS/ocampo.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="gem-container">
+    <img src="../images/gem.png" alt="Gem Logo" class="gem-logo">
+  </div>
+    <nav>
+      <button><a href="../index.html">HOME</a></button>
+      <button onclick="navigateTo('about')">ABOUT</button>
+      <button onclick="navigateTo('portfolio')">PORTFOLIO</button>
+      <button onclick="navigateTo('contacts')">CONTACTS</button>
+    </nav>
+  </header>
+
+  <!-- Homepage Section -->
+  <section id="home" class="hero">
+    <div class="profile">
+      <img src="../images/profilecard.jpg" alt="Kenzo">
+    </div>
+    <div class="intro">
+      <h1><b>AVISALA!</b></h1>
+      <h2>I’m <span class="bold">Kenzo Lian M. Ocampo</span></h2>
+      <p>The Guardian/Keeper of the <span class="bold">WATER GEM</span></p>
+      <button class="info-btn" onclick="navigateTo('about')">Click for more info</button>
+    </div>
+  </section>
+
+   <!-- About Section -->
+<section id="about" class="about">
+  <div class="about-container">
+    <h1><img src="../images/gem.png" class="about-logo"> <strong>ABOUT ME</strong></h1>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="../images/sit.jpeg" alt="Kenzo Sitting">
+      </div>
+      <div class="about-text">
+        <p>Avisala! I’m <span class="bold">Kenzo Lian M. Ocampo</span> the Guardian of the Water Gem in Encantadia!</p>
+        <p>As a Sanggre I’m currently studying <i>Bachelor of Science in Information Technology, Major in Web and Mobile Application</i> at Tarlac State University.</p>
+        <p>I’m born in Brgy. San Roque, Bamban, Tarlac. Currently residing in Brgy. San Roque, Tarlac City.</p>
+        <p>I am outgoing, dedicated, and open-minded. I get across to people and adjust to changes with ease. I believe that a person should work on developing their professional skills and learning new things all the time.</p>
+      </div>
+    </div>
+
+    <!-- Skills / Hobbies / Education -->
+    <div class="cards">
+      <div class="card">
+        <h3><strong>TECHNICAL SKILLS</strong></h3>
+        <ul>
+          <li><img src="../images/html.png" alt=""> HTML</li>
+          <li><img src="../images/css.png" alt=""> CSS</li>
+          <li><img src="../images/js.png" alt=""> JavaScript</li>
+          <li><img src="../images/php.png" alt=""> PHP</li>
+          <li><img src="../images/mysql.png" alt=""> MySQL</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3><strong>HOBBIES</strong></h3>
+        <ul>
+          <li>🎤 Singing</li>
+          <li>💃 Dancing</li>
+          <li>🎮 Playing Online Games</li>
+          <li>🍳 Cooking</li>
+        </ul>
+      </div>
+
+      <div class="card wide education-card">
+        <h3><strong>EDUCATION</strong></h3>
+        <ul>
+          <li>Tarlac State University - BS Information Technology, Major in Web and Mobile Application (Present)</li><br>
+          <li>Dapdap High School - Science Technology and Engineering Mathematics (2022)</li><br>
+          <li>Dapdap High School - Junior High School (2016-2020)</li><br>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO SECTION -->
+<section class="portfolio" id="portfolio">
+    <div class="portfolio-container">
+        <h1><img src="../images/gem.png" class="gem-title"> <strong>MY PORTFOLIO</strong></h1>
+
+    <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card">
+            <img src="../images/calculator.png" alt="Realistic Calculator">
+            <h3>Realistic Calculator</h3>
+            <div class="tech-icons">
+            <img src="../images/html.png" alt="HTML">
+            <img src="../images/css.png" alt="CSS">
+            <img src="../images/js.png" alt="JavaScript">
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card">
+            <img src="../images/profilecard.png" alt="Profile Card">
+            <h3>Profile Card</h3>
+            <div class="tech-icons">
+            <img src="../images/html.png" alt="HTML">
+            <img src="../images/css.png" alt="CSS">
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-card">
+            <img src="../images/insert.png" alt="Inserting Student">
+            <h3>Inserting Student</h3>
+            <div class="tech-icons">
+            <img src="../images/html.png" alt="HTML">
+            <img src="../images/css.png" alt="CSS">
+            <img src="../images/js.png" alt="JavaScript">
+            <img src="../images/php.png" alt="PHP">
+            <img src="../images/mysql.png" alt="MySQL">
+            </div>
+        </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-card">
+                <img src="../images/database.png" alt="Database">
+                <h3>Database</h3>
+                <div class="tech-icons">
+                <img src="../images/html.png" alt="HTML">
+                <img src="../images/css.png" alt="CSS">
+                <img src="../images/js.png" alt="JavaScript">
+                <img src="../images/php.png" alt="PHP">
+                <img src="../images/mysql.png" alt="MySQL">
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contacts">
+  <h1>
+    <img src="../images/gem.png" alt="Gem Logo" class="contact-logo">
+    <strong>CONTACT ME!</strong>
+  </h1>
+
+  <div class="contact-container">
+    <!-- Phone -->
+    <a href="tel:+639634396215" class="contact-item">
+      <i class="fas fa-phone"></i>
+      <span>+63 963 439 6215</span>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:kenzolian11@gmail.com" class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>kenzolian11@gmail.com</span>
+    </a>
+
+    <!-- Messenger -->
+    <a href="https://m.me/KenzoOcampo" target="_blank" class="contact-item">
+      <i class="fab fa-facebook-messenger"></i>
+      <span>@Kenzo Ocampo</span>
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>
+    © 2025 Kenzo Lian Ocampo • Blessed by <span>Encantadia</span> • Powered by <span>Brilyante ng Tubig</span>
+  </p>
+</footer>
+
+  <script src="../JS/ocampo.js"></script>
+</body>
+</html>

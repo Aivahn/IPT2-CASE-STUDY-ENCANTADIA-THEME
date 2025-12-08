@@ -686,13 +686,13 @@ a:focus, button:focus {
   }
   
   .hero-subtitle {
-    font-size: 1rem;  
+    font-size: 1rem;
     margin-bottom: 1.5rem;
   }
   
   .hero-gem-large {
     transform: scale(1.5);
-  } 
+  }
   
   .cta-row {
     flex-direction: column;

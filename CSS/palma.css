@@ -234,3 +234,57 @@ strong {
   color: #fff;
   font-size: 1.05em;
 }
+
+.books-section {
+  padding: 60px 8%;
+  background: #000;
+}
+
+#random-book, #top-books {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.book-card {
+  background: #111;
+  padding: 15px;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.book-card h3 {
+  font-size: 1.1em;
+  margin: 10px 0 5px 0;
+}
+
+.book-card p {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 600px) {
+  .book-card {
+    width: 140px;
+  }
+  .book-card img {
+    height: 200px;
+  }
+}
+

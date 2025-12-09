@@ -42,6 +42,25 @@ function createRainDrop() {
   });
 }
 
+// Joke API Functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const jokeBtn = document.getElementById("joke-btn");
+  const jokeText = document.getElementById("joke-text");
+
+  if (jokeBtn) {
+    jokeBtn.addEventListener("click", function () {
+      fetch("https://official-joke-api.appspot.com/random_joke")
+        .then(response => response.json())
+        .then(data => {
+          jokeText.textContent = `${data.setup} - ${data.punchline}`;
+        })
+        .catch(() => {
+          jokeText.textContent = "Oops! Something went wrong loading a joke.";
+        });
+    });
+  }
+});
+
 function createRipple(x, y) {
   const ripple = document.createElement("div");
   ripple.classList.add("ripple");

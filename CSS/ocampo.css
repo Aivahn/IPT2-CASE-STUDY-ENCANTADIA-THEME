@@ -530,3 +530,73 @@ footer span {
   font-weight: bold;
   color: #78ffd6;
 }
+
+/* Joke Section */
+.joke-section {
+  padding: 120px 20px 80px;
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.joke-container {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.08); 
+  border-radius: 25px;
+  padding: 50px 40px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+}
+
+.joke-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #a8ff78, #78ffd6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 2px;
+}
+
+.joke-box {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 25px 25px;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.35);
+}
+
+#joke-text {
+  font-size: 19px;
+  margin-bottom: 20px;
+  color: #e0ffe6;
+  line-height: 1.6;
+}
+
+#joke-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #046d2d, #1c8f4c);
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.25s ease, background 0.3s;
+}
+
+#joke-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #0a923f, #2ecc71);
+}

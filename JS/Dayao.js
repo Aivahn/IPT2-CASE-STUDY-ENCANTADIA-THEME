@@ -8,8 +8,8 @@ const aboutBoxes = document.querySelectorAll(".about-box");
 
 aboutBoxes.forEach(box => {
   box.addEventListener("click", function (e) {
-    e.preventDefault(); // stop default jump
-    const targetId = this.getAttribute("href"); // get the target section
+    e.preventDefault();
+    const targetId = this.getAttribute("href");
     const target = document.querySelector(targetId);
     if (target) {
       target.scrollIntoView({
@@ -70,6 +70,11 @@ quote.innerHTML = `
 };
 
 getquote();
+
+quote.style.cursor = "pointer";
+quote.addEventListener("click", () => {
+  getquote();
+});
 
 
 

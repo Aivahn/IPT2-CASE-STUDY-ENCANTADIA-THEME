@@ -30,10 +30,10 @@ document.querySelectorAll(".scroll-down").forEach(button => {
   });
 });
 
-// Scroll Up button (Contact → Home)
+
 document.querySelectorAll(".scroll-up").forEach(button => {
   button.addEventListener("click", () => {
-    const target = document.getElementById("home"); // force scroll to top
+    const target = document.getElementById("home");
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }
@@ -72,4 +72,4 @@ quote.innerHTML = `
 getquote();
 
 
-// 2a7d593c35b807de6cfdebda20bd0074
+
